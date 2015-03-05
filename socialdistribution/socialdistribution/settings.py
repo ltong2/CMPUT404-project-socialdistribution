@@ -1,5 +1,5 @@
 """
-Django settings for SocialDistribution project.
+Django settings for socialdistribution project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -36,6 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap3',
+    'author',
+    'post',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -48,9 +51,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'SocialDistribution.urls'
+ROOT_URLCONF = 'socialdistribution.urls'
 
-WSGI_APPLICATION = 'SocialDistribution.wsgi.application'
+WSGI_APPLICATION = 'socialdistribution.wsgi.application'
 
 
 # Database
@@ -62,6 +65,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
